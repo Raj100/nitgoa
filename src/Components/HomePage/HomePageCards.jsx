@@ -8,9 +8,9 @@ const HomePageCards = ({ title, contentItems, svgPath }) => {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d={svgPath} />
           </svg>
-          <h2 className='text-xl'>{title}</h2>
+          <h2 className='text-xl font-bold'>{title}</h2>
         </div>
-        <div className='overflow-auto h-60 m-2' id="content">
+        <div className='overflow-auto h-60 m-2 text-gray-600' id="content">
         {contentItems.map((item, index) => (
           <div className='py-2' key={index}>
             <div className='font-bold' id={`sub-title-${index}`}>{item.title}</div>

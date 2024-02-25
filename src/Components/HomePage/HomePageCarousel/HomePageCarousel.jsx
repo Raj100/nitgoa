@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 
 import './styles.css';
 // import required modules
-import { Keyboard, EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Keyboard, EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 export default function App() {
   return (
@@ -23,6 +23,10 @@ export default function App() {
         keyboard= {{
           enabled: true,
         }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -34,7 +38,7 @@ export default function App() {
           clickable: true,
         }}
         navigation={true}
-        modules={[Keyboard, EffectCoverflow, Pagination, Navigation]}
+        modules={[Autoplay, Keyboard, EffectCoverflow, Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
