@@ -24,7 +24,7 @@ export default function App() {
           enabled: true,
         }}
         coverflowEffect={{
-          rotate: 90,
+          rotate: 50,
           stretch: 0,
           depth: 300,
           modifier: 1,
