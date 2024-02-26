@@ -1,7 +1,7 @@
 import React from 'react'
 import HomePageCarousel from './HomePageCarousel/HomePageCarousel'
 import HomePageCards from './HomePageCards'
-import Moto from '../../assets/moto.png'
+import HomePageMoto from './HomePageMoto/HomePageMoto';
 
 const HomePage = () => {
 
@@ -99,19 +99,9 @@ const HomePage = () => {
       </svg>
         <span>Tweets</span>
       </div>
-
-    </div>
-    
-
-    <div className='bg-white m-10 p-4 shadow-md rounded-xl'>
-      <h1 className='text-center'>Our Moto</h1>
-      <div className='mx-auto mt-0.5 w-10 border border-black'></div>
-      <div className='my-10 mx-auto text-center w-40'>
-      NIT Goa strives for quality faculty, good students and excellent infrastructure
-      </div>
-      <img src={Moto} className='mx-auto'/>
     </div>
 
+    <HomePageMoto/>
     </>
   )
 }

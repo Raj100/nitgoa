@@ -12,7 +12,7 @@ import './styles.css';
 // import required modules
 import { Autoplay, Keyboard, EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
-export default function App() {
+export default function HomePageCarousel() {
   return (
     <>
       <Swiper
