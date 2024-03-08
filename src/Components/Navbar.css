@@ -1,0 +1,10 @@
+.raj {
+    transform: translateX(-100%);
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+.raju1 {
+    transform: translateX(0px);
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
