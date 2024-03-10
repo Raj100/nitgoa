@@ -12,9 +12,9 @@ const Academics = () => {
         <div className={`font-dosis bg-${theme}bg pt-12 text-${theme}txt`}>
         <h1 className='text-center font-bold text-2xl'>Academic Calendar</h1>
         <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5`}></div>
-        <div className='flex flex-wrap'>
+        <div className='flex flex-col flex-wrap items-center justify-items-center mx-auto'>
             <div className='m-5'>
-                <img src={Rectangle41} alt="Earphone" className='h-[200px]' />
+                <img src={Rectangle41} alt="Earphone" />
                 <div className={`h-20 bg-${theme}th text-white p-3 rounded-b-xl flex flex-col justify-between`}>
                     <div className='flex justify-between items-center'>
                     <p className='text-bold text-lg'>Even Semester</p>

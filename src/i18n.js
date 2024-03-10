@@ -55,6 +55,16 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 Air_content: "Goa’s sole airport, the ‘Dabolim Airport’ in Vasco, caters to domestic and international airlines that stop en route to other Indian destinations. It is at a distance of around 30 Km (45 Minute ride) from the institute.",
                 Rail_content: "Goa has two rail lines-one run by the South Western Railway and the other by the Konkan Railway. Closest major railway station is ‘Madgaon Railway Station’ which is around 20 Km (30 Minute ride) from the institute.",
                 location: "NIT Goa Location",
+                bog: "Board of Governers",
+                director: "Director",
+                registrar: "Registrar",
+                senate: "Senate",
+                dean: "Deans",
+                bwc: "Building and Works Committee",
+                finance: "Finance",
+                reports: "Reports",
+                academic_calender: "Academic Calendar",
+                dissertation: "Dissertation",
             }
         },
 
@@ -107,6 +117,17 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 Air_content: "गोवा का एकमात्र हवाई अड्डा, वास्को में 'डाबोलिम हवाई अड्डा', घरेलू और अंतरराष्ट्रीय एयरलाइनों को सेवाएं प्रदान करता है जो अन्य भारतीय गंतव्यों के रास्ते में रुकती हैं। यह संस्थान से लगभग 30 किमी (45 मिनट की सवारी) की दूरी पर है।",
                 Rail_content: "गोवा में दो रेल लाइनें हैं- एक दक्षिण पश्चिम रेलवे द्वारा और दूसरी कोंकण रेलवे द्वारा। निकटतम प्रमुख रेलवे स्टेशन 'मडगांव रेलवे स्टेशन' है जो संस्थान से लगभग 20 किमी (30 मिनट की सवारी) दूर है।",
                 location: "एनआईटी गोवा का स्थान", 
+                bog: "गवर्नर्स बोर्ड",
+                director: "निदेशक",
+                registrar: "रजिस्ट्रार",
+                senate: "व्यवस्थापिका सभा",
+                dean: "डीन",
+                bwc: "भवन एवं कार्य समिति",
+                finance: "आर्थिक प्रबन्ध",
+                reports: "प्रतिवेदन",
+                academic_calender: "शैक्षणिक कैलेंडर",
+                dissertation: "विवरण",
+
             }
         }
     }

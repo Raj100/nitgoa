@@ -79,28 +79,28 @@ const Navbar = () => {
             <p className="ml-8" id='admin'>
               <ul className="pt-3">
                 <li className={`mb-[13px] border-b border-b-gray-50/25`}>
-                  <Link to="/BOG">BOG</Link>
+                  <Link to="/BOG">{t('bog')}</Link>
                 </li>
                 <li className={`mb-[13px] border-b border-b-gray-50/25`}>
-                  <Link to="/Director">Director</Link>
+                  <Link to="/Director">{t('director')}</Link>
                 </li>
                 <li className={`mb-[13px] border-b border-b-gray-50/25`}>
-                  <Link to="/Registrar">Registrar</Link>
+                  <Link to="/Registrar">{t('registrar')}</Link>
                 </li>
                 <li className={`mb-[13px] border-b border-b-gray-50/25`}>
-                  <Link to='/Senate'>Senate</Link>
+                  <Link to='/Senate'>{t('senate')}</Link>
                 </li>
                 <li className={`mb-[13px] border-b border-b-gray-50/25`}>
-                  <Link to='/Dean'>Deans</Link>
+                  <Link to='/Dean'>{t('dean')}</Link>
                 </li>
                 <li className={`mb-[13px] border-b border-b-gray-50/25`}>
-                  <Link to='/Building'>Building and Works Committee</Link>
+                  <Link to='/Building'>{t('bwc')}</Link>
                 </li>
                 <li className={`mb-[13px] border-b border-b-gray-50/25`}>
-                  <Link to='/Finance'>Finance</Link>
+                  <Link to='/Finance'>{t("finance")}</Link>
                 </li>
                 <li className={`mb-[13px] border-b border-b-gray-50/25`}>
-                  <Link to='/Reports'>Reports</Link>
+                  <Link to='/Reports'>{t("reports")}</Link>
                 </li>
               </ul>
             </p>
@@ -110,10 +110,10 @@ const Navbar = () => {
             <p className="ml-8" id='academic'>
               <ul className="pt-3">
                 <li className={`mb-[13px] border-b border-b-gray-50/25`}>
-                  <Link to="/Academics">Academic Calender</Link>
+                  <Link to="/Academics">{t("academic_calender")}</Link>
                 </li>
                 <li className={`mb-[13px] border-b border-b-gray-50/25`}>
-                  <Link to="/Dissertation">Dissertation Form</Link>
+                  <Link to="/Dissertation">{t("dissertation")}</Link>
                 </li>
               </ul>
             </p>
