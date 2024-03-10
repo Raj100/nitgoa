@@ -11,7 +11,7 @@ const Academics = () => {
         <Navbar></Navbar>
         <div className={`font-dosis bg-${theme}bg pt-12 text-${theme}txt`}>
         <h1 className='text-center font-bold text-2xl'>Academic Calendar</h1>
-        <img src={Line} alt="Line" className='mx-auto' />
+        <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5`}></div>
         <div className='flex flex-wrap'>
             <div className='m-5'>
                 <img src={Rectangle41} alt="Earphone" className='h-[200px]' />

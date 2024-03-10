@@ -1,36 +1,78 @@
 import React from "react";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { AppContext } from "./AppContext";
+import { useTranslation } from "react-i18next";
+import Twitter from '../assets/twitter.png';
+import LinkedIn from '../assets/linkedin.png';
+import Insta from '../assets/insta.png';
 const Footer = () => {
+  const {t} = useTranslation()
   const {theme}=useContext(AppContext);
 
+  const [totalVisitors, setTotalVisitors] = useState(0);
+
+  useEffect(() => {
+    const hasVisited = sessionStorage.getItem("visited");
+    if (!hasVisited) {
+      incrementVisitorCount();
+
+      sessionStorage.setItem("visited", "true");
+    }
+
+    fetchVisitorCount();
+  }, []);
+
+  const fetchVisitorCount = () => {
+    fetch("http://localhost:3002/count")
+      .then((response) => response.json())
+      .then((data) => {
+        setTotalVisitors(data.totalVisitors);
+      })
+      .catch((error) => {
+        console.error("Error fetching visitor count:", error);
+      });
+  };
+
+  const incrementVisitorCount = () => {
+    fetch("http://localhost:3002/count", { method: "POST" })
+      .then(() => {
+        fetchVisitorCount();
+      })
+      .catch((error) => {
+        console.error("Error incrementing visitor count:", error);
+      });
+  };
   return (
     <>
       <footer className={`flex flex-col bg-defaultbg2 justify-center font-dosis`}>
         <a className={`bg-${theme}th py-[11px] px-[10px] text-center text-[13px] text-white border-b-[0.2px] border-black`}>
-          QUICK LINKS
+          {t("quicklink")}
         </a>
         <a className={`bg-${theme}th py-[11px] px-[10px] text-center text-[13px] text-white border-b-[0.2px] border-black`}>
-          INFORMATION
+          {t("info")}
         </a>
         <a className={`bg-${theme}th py-[11px] px-[10px] text-center text-[13px] text-white border-b-[0.2px] border-black`}>
-          NATIONAL PORTALS
+          {t("natpor")}
         </a>
         <a className={`bg-${theme}th py-[11px] px-[10px] text-center text-[13px] text-white border-b-[0.2px] border-black`}>
-          CONTACT US
+          {t("contact_us")}
         </a>
 
         <div className="flex justify-center mt-[42px] ">
-          <div className={`w-[45px] h-[45px] bg-${theme}th rounded-full`}></div>
-          <div className={`w-[45px] h-[45px] ml-[25px] bg-${theme}th rounded-full`}></div>
-          <div className={`w-[45px] h-[45px] ml-[25px] bg-${theme}th rounded-full`}></div>
+          <div className={`w-[45px] h-[45px] bg-${theme}th rounded-full`}>
+            <img src={Twitter} className="p-3"/>
+          </div>
+          <div className={`w-[45px] h-[45px] ml-[25px] bg-${theme}th rounded-full`}>
+            <img src={LinkedIn} className="p-3"/>
+          </div>
+          <div className={`w-[45px] h-[45px] ml-[25px] bg-${theme}th rounded-full`}>
+            <img src={Insta} className="p-2"/>
+          </div>
         </div>
 
         {/* visit counter */}
         <div className={`flex justify-center items-center w-[150px] bg-${theme}th h-[30px] rounded-lg	mx-auto mb-11 text-white text-sm mt-[22px]`}>
-          VISIT COUNT : 200000
-          {/* <a href='https://dissertation-writingservice.com/'></a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=aa70cb3c0c19fb231f37a07611d90ec2588a2bda'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1153186/t/3"></script> */}
+          {t("visit")} : <span id="counter">{totalVisitors}</span>
         </div>
 
         {/* line */}

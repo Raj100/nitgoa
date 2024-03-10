@@ -7,8 +7,10 @@ import Graphlogo from "../assets/Graph.svg"
 import Synapselogo from "../assets/Doc.svg"
 import Tweetlogo from "../assets/Tweet.svg"
 import { AppContext } from './AppContext'
+import { useTranslation } from 'react-i18next'
 
 const Announcement = () => {
+  const {t} = useTranslation();
   const {theme}=useContext(AppContext);
   return (
     <div>
@@ -21,8 +23,8 @@ const Announcement = () => {
 
 <div className='border-[0.2px] m-5 border-[#9F9F9F]'></div>
 <div className=' flex flex-col text-center justify-center'>
-  <h1 className='font-dosis font-semibold	text-lg	'>Announcement</h1>
-  <img className='mx-auto' src={Line} alt="Line" />
+  <h1 className='font-dosis font-semibold	text-lg	'>{t("announcement")}</h1>
+  <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5`}></div>
 </div>
 
 
@@ -34,7 +36,7 @@ const Announcement = () => {
     <div className='w-full h-[242px]'>
     <div className='flex '>
       <img className='w-6' src={News} alt="News" />
-      <h1> News and events</h1>
+      <h1>{t("news_events")}</h1>
     </div>
     </div>
   </div>
@@ -43,7 +45,7 @@ const Announcement = () => {
   <div className='w-full h-[242px]'>
     <div className='flex'>
       <img className='w-6' src={DynamicLinks} alt="Quick Link" />
-      <h1>  Quick Link</h1>
+      <h1>{t("quicklink")}</h1>
     </div>
     </div>
     <div>
@@ -57,7 +59,7 @@ const Announcement = () => {
   <div className='w-full h-[242px]'>
     <div className='flex'>
       <img className='w-6 !text-redth' src={Noticeboard} alt="Noticeboard" />
-      <h1>  Notice Board</h1>
+      <h1>{t("notice")}</h1>
     </div>
     </div>
   </div>
@@ -69,8 +71,8 @@ const Announcement = () => {
 <div className='border-[#9F9F9F] border-[0.2px] my-5 mx-4'></div>
 
 <div className={`m-4 bg-${theme}txtbg border rounded-xl p-5`}>
-  <h1 className='font-dosis font-extrabold	text-base'>🚨 Announcement</h1>
-  <p className='text-xs	font-semibold'>All nine eligible B.Tech. programmes have been accredited by the NBAAll nine eligible B.Tech. programmes have been accredited by the NBAAll nine eligible B.Tech. programmes have been accredited by the NBAAll nine eligible B.Tech. programmes have been accredited by theAll nine eligible B.Tech. programmes have been accredited by the</p>
+  <h1 className='font-dosis font-extrabold	text-base'>🚨 {t("announcement")}</h1>
+  <p className='text-xs	font-semibold'>{t("announcement_content")}</p>
 </div>
 
 <div className='border-[#9F9F9F] border-[0.2px] my-5 mx-4 '></div>
@@ -80,7 +82,7 @@ const Announcement = () => {
 <div className={`m-4 bg-${theme}txtbg border rounded-xl p-5`}>
   <div className='flex items-center'>
     <img className={`w-5 filter ${(theme==="dark")? "invert" :""}  mr-1`} src={Graphlogo} alt="Graphlogo" />
-  <h1 className='font-dosis font-extrabold text-xl'>Placement Statistics</h1>
+  <h1 className='font-dosis font-extrabold text-xl'>{t("placement_stat")}</h1>
   </div>
   <div className='h-64'>
 
@@ -92,7 +94,7 @@ const Announcement = () => {
 <div className={`m-4 bg-${theme}txtbg border border-${theme}txtbg rounded-xl p-5`}>
   <div className='flex items-center'>
     <img className={`w-5 filter ${(theme==="dark")? "invert" :""}  mr-1`} src={Synapselogo} alt="Synapselogo" />
-  <h1 className='font-dosis font-extrabold text-xl '> Synapse</h1>
+  <h1 className='font-dosis font-extrabold text-xl '>{t("synapse")}</h1>
   </div>
   <div className='h-64'>
 
@@ -104,7 +106,7 @@ const Announcement = () => {
 <div className={`m-4 bg-${theme}txtbg border rounded-xl p-5`}>
   <div className='flex items-center'>
     <img className={`w-5 filter ${(theme==="dark")? "invert" :""} mr-1`} src={Tweetlogo} alt="Tweetlogo" />
-  <h1 className='font-dosis font-extrabold text-xl '> Tweets</h1>
+  <h1 className='font-dosis font-extrabold text-xl '>{t("tweet")}</h1>
   </div>
   <div className='h-64'>
 

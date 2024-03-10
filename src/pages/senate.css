@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: noto sans;
+    margin: auto;
+}
+
+
+
+
+
+.page{
+    height: auto;
+    
+}
+.top {
+    height: 50px;
+    width: 100%;
+    background-color: #4361EE;
+    display: flex;
+    font-family: noto sans;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.lang {
+    flex-basis: 60%;
+    display: flex;
+    margin: auto;
+
+}
+
+.lang img {
+    height: 20px;
+    width: 20px;
+    margin: 15px 2px 15px 15px;
+    cursor: pointer;
+}
+
+.lang div {
+    margin-top: 18px;
+    cursor: pointer;
+    color: white;
+
+    /* font-size: 15px; */
+}
+
+
+
+.top-right {
+    flex-basis: 40%;
+    display: flex;
+    margin: auto;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.page {
+    height: auto;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: sticky;
+   
+    background: #FFF;
+    box-shadow: 0px 1px 1px 0px rgba(32, 32, 32, 0.30);
+}
+
+.ham {
+    padding-left: 5px;
+}
+
+.search {
+    padding-right: 5px;
+
+}
+
+.cont{
+    width: 100%;
+    height: auto;
+}
+
+.cont h2{
+    text-align: center;
+
+}
+.cont h4{
+    text-align: center;
+
+}
+
+.tab{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 5px;
+    font-size: xx-small;
+  }
+
+  * .pop-up{
+    width: 90%;
+    margin-left: 5%;
+    background-color: white;
+    margin-top: 20px;
+    
+    display: block;
+    border: 1px solid #79747E;
+    border-radius: 28px 28px 28px 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+   
+    overflow-y: scroll;
+
+   
+} 
+  .top-hr{
+    width: 10%;
+    margin: auto;
+    border: 1px solid #79747E;
+}
+
+.pop-up h4{
+    text-align: center;
+    margin-top: 25px;
+}
+
+.low-hr{
+    width: 20%;
+    margin: auto;
+    border: 1px solid blue;
+    margin-top: 10px;
+}
+
+.list{
+    width: 80%;
+    height: 300px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    font-weight: 800;
+    overflow-y: scroll;
+}
+
+.list ul{
+    list-style-type: none;
+}
+
+.list ul li{
+    margin: 10px 0px 10px 0px;
+}
+
+.list ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: #151C40;
+}

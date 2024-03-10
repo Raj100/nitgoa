@@ -11,6 +11,7 @@ import Departments from './Pages/Departments.jsx'
 import Research from './Pages/Research.jsx'
 import TraningandPlacement from './Pages/TraningandPlacement.jsx'
 import Alumni from './Pages/Alumni.jsx'
+import './i18n.js';
 
 
 // ReactDOM.createRoot(document.getElementById('root')).render(

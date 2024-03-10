@@ -9,10 +9,13 @@ import { Link } from "react-router-dom";
 import { AppContext } from "./AppContext";
 import NitGoalogo from "../assets/NIT_Goa_logo.png"
 import divider from "../assets/Divder.svg"
+import { useTranslation } from "react-i18next";
+import LanguageTranslator from "./LanguageToggle";
 
 // import Hamburger from './Hamburger'
 
 const Navbar = () => {
+  const {t} = useTranslation()
   // const [theme,settheme]=useState("");
   const {theme,settheme}=useContext(AppContext);
   const [colorpickermenu,setcolorpickermenu]=useState(false);
@@ -47,7 +50,7 @@ const Navbar = () => {
       >
         <div className="flex">
           <div className="w-56 bg-white py-[10px] pl-[22px] [pr-18px] rounded-[50px] mr-4 relative flex justify-center items-center overflow-hidden">
-            <input type="text" placeholder="🔍 Search..." className=" w-full flex mr-2 border-0 active:border-0 focus:border-0"/>
+            <input type="text" placeholder={`🔍 ${t('search')}`} className=" w-full flex mr-2 border-0 active:border-0 focus:border-0"/>
           </div>
           <div className="rounded-full w-11 bg-white mr-4 flex justify-center items-center" onClick={()=>{setcolorpickermenu(!colorpickermenu);}}> <img src={colorpicker} alt="colorpicker" className="w-[30px]"/></div>
           <div
@@ -57,17 +60,17 @@ const Navbar = () => {
           </div>
         </div>
         <div className="p-[15px] mt-6 text-white font-dosis text-2xl">
-          <p onClick={toggleMenu} className="mb-[13px]"><Link to="/">Home</Link></p>
-          <p onClick={toggleMenu} className="mb-[13px]"> <Link to="/About">About Us</Link></p>
-          <p onClick={()=>{toggleMenu();}} className="mb-[13px]"><Link to="/Administration" >Administration</Link></p>
-          <p  className="mb-[13px]"><Link to="/Academics" >Academics</Link></p>
-          <p  className="mb-[13px]"><Link to="/Departments" >Departments</Link></p>
-          <p  className="mb-[13px]"><Link to="/Research" >Research</Link></p>
-          <p  className="mb-[13px]"><Link to="/Traning&Placement" >Traning & Placement</Link></p>
+          <p onClick={toggleMenu} className="mb-[13px]"><Link to="/">{t("home")}</Link></p>
+          <p onClick={toggleMenu} className="mb-[13px]"> <Link to="/About">{t("about_us")}</Link></p>
+          <p onClick={()=>{toggleMenu();}} className="mb-[13px]"><Link to="/Administration" >{t("administration")}</Link></p>
+          <p  className="mb-[13px]"><Link to="/Academics" >{t("academics")}</Link></p>
+          <p  className="mb-[13px]"><Link to="/Departments" >{t("dept")}</Link></p>
+          <p  className="mb-[13px]"><Link to="/Research" >{t("research")}</Link></p>
+          <p  className="mb-[13px]"><Link to="/Traning&Placement" >{t("t_p")}</Link></p>
           {/* <p  className="mb-[13px]"><Link to="/Research" >Students</Link></p> */}
-          <p  className="mb-[13px]"><Link to="/Alumni" >Alumni</Link></p>
-          <p  className="mb-[13px]"><Link to="/Noneofourbussiness" >Fee Payment</Link></p>
-          <p >Mis Portal</p>
+          <p  className="mb-[13px]"><Link to="/Alumni" >{t("alumni")}</Link></p>
+          <p  className="mb-[13px]"><Link to="/Noneofourbussiness" >{t("feepay")}</Link></p>
+          <p className="mb-[13px]">{t("mis")}</p>
         </div>
          {colorpickermenu && (
          <div className="absolute inset-y-1/2 inset-x-1/2 -translate-x-2/4 -translate-y-2/4 bg-gray-100 h-48 w-56 rounded-lg border flex flex-col content-center">
@@ -83,15 +86,12 @@ const Navbar = () => {
       </nav>
 
       <div className={` h-[50px] px-4 py-3 flex justify-between items-center bg-${theme}th text-white text-xs`}>
-        <div className="flex jutify-center items-center">
-          <img className="w-6 mr-2" src={translation} alt="translate" />
-          <p>English</p>
-        </div>
+          <LanguageTranslator />
         <div className="text-dosis">
           <a href="" className=" pr-[10px] ">
-            G.I.A.N
+            {t('gian')}
           </a>
-          <a href="">Login</a>
+          <a href="">{t('login')}</a>
         </div>
       </div>
 
@@ -110,17 +110,17 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="flex gap-[23px] items-center p-[10px] font-dosis text-lg	font-bold overflow-hidden whitespace-nowrap">
-              <li>Home</li>
-              <li>Administration</li>
-              <li>Academics</li>
-              <li>Admissions</li>
-              <li>People</li>
-              <li>Research</li>
-              <p>Traning & Placement</p>
-              <li>Outreach Activities</li>
-              <li>NIRF</li>
-              <li>Alumni</li>
-              <li>Fee Payment</li>
+              <li>{t("home")}</li>
+              <li>{t("about_us")}</li>
+              <li>{t("academics")}</li>
+              <li>{t("admission")}</li>
+              <li>{t("people")}</li>
+              <li>{t("research")}</li>
+              <p>{t("t_p")}</p>
+              <li>{t("outreach")}</li>
+              <li>{t("nirf")}</li>
+              <li>{t("alumni")}</li>
+              <li>{t("feepay")}</li>
             </ul>
             </div>
         </div>

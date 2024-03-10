@@ -14,10 +14,10 @@ const Departments = () => {
             <img src="" alt="" />
         </div> */}
 
-        <h1 className="text-center text-2xl font-bold">
+        <h1 className="text-center text-2xl font-bold mt-2">
         Departments
         </h1>
-        <img src={Line} alt="Line" className="mx-auto" />
+        <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5`}></div>
 
         <div className="grid m-5 gap-[31px]">
           <div className="rounded-2xl border-2 h-52 border-[#555] relative ">
