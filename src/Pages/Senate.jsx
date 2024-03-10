@@ -1,35 +1,17 @@
+import Footer from '../Components/Footer';
+import Navbar from '../Components/Navbar';
 import './senate.css';
-import translation from '../images/Translation.png';
-import menu from '../images/menu.png';
-import logo from '../images/logo1 1.png';
-import search from '../images/search_24px.png';
+import { AppContext } from '../Components/AppContext';
+import { useContext } from 'react';
 
 const Senate = () => {
+  const {theme} = useContext(AppContext);
     return(
- <div className="page">
-  <div className="top">
-    <div className="lang">
-      <img src={translation} alt />
-      <div>ENGLISH</div>
-    </div>
-    <div className="top-right">
-      <div>G.I.A.N</div>
-      <div>Login</div>
-    </div>
-  </div>
-  <div className="header">
-    <div className="ham">
-      <img src={menu} onclick="opennav()" alt />
-    </div>
-    <div className="logo">
-      <img src={logo} alt />
-    </div>
-    <div className="search">
-      <img src={search} alt />
-    </div>
-  </div>
-  <div className="cont">
-    <h2>Senate Committee</h2>
+ <div className="page font-dosis">
+  <Navbar/>
+  <div className="mt-5">
+    <h2 className='text-xl font-bold text-center'>Senate Committee</h2>
+    <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5`}></div>
     <div className="tab">
       <table>
         <tbody><tr>
@@ -135,6 +117,7 @@ const Senate = () => {
       </div>
     </div>
   </div>
+  <Footer/>
 </div>
 
 

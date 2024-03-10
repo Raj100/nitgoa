@@ -1,12 +1,20 @@
+import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 import "./bod.css";
+import { AppContext } from "../Components/AppContext";
+import { useContext } from "react";
 
-const Bod = () => {
+const BOG = () => {
+  const { theme } = useContext(AppContext);
   return (
-    <div className="page">
-      <div className="cont">
-        <h2>Board of Governors(BoG)</h2>
-        <div className="tab">
-          <table>
+    <>
+    <Navbar/>
+    <div className="font-dosis">
+      <div className="cont mt-8">
+        <h2 className="font-bold text-xl">Board of Governors(BoG)</h2>
+        <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5`}></div>
+        <div className="mx-auto w-full p-5">
+          <table className="mt-5">
             <tbody>
               <tr>
                 <th>S.no</th>
@@ -111,7 +119,9 @@ Two persons not below the rank of JS to the Govt. of India to be nominated by th
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
-export default Bod;
+export default BOG;

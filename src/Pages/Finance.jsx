@@ -1,12 +1,17 @@
-import "./bod.css";
+import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
+import { AppContext } from "../Components/AppContext";
+import { useContext } from "react";
 
-
-
-const Finanace = () => {
+const Finance = () => {
+    const { theme } = useContext(AppContext);
     return (
-      <div className="page">
+      <>
+      <Navbar/>
+      <div className="page font-dosis mt-5">
         <div className="cont">
-          <h2>FINANCE COMMITTEE (FC) of NIT Goa</h2>
+          <h2 className="text-xl font-bold">FINANCE COMMITTEE (FC) of NIT Goa</h2>
+          <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5`}></div>
           <div className="tab">
             <table>
               <tbody>
@@ -77,8 +82,10 @@ const Finanace = () => {
           </div>
         </div>
       </div>
+      <Footer/>
+      </>
     );
   };
   
-  export default Finanace;
+  export default Finance;
   

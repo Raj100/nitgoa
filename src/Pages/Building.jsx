@@ -1,12 +1,17 @@
-import "./bod.css";
-
-
+import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
+import { AppContext } from "../Components/AppContext";
+import { useContext } from "react";
 
 const Building = () => {
+    const { theme } = useContext(AppContext);
     return (
-      <div className="page">
-        <div className="cont">
-          <h2>Building and Works Committee</h2>
+      <>
+      <Navbar/>
+      <div className="page font-dosis">
+        <div className="cont mt-5">
+          <h2 className="text-xl font-bold">Building and Works Committee</h2>
+          <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5`}></div>
           <div className="tab">
             <table>
               <tbody>
@@ -76,6 +81,8 @@ const Building = () => {
           </div>
         </div>
       </div>
+      <Footer/>
+      </>
     );
   };
   

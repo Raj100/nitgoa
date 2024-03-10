@@ -2,11 +2,15 @@ import "./bod.css";
 import { useContext } from "react";
 import { AppContext } from "../Components/AppContext";
 import Line from "../assets/Line.svg";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 
 const Deans = () => {
     const {theme}=useContext(AppContext);
     return (
+      <>
+      <Navbar/>
       <div className="page mt-5 font-dosis">
         <div className="cont">
           <h1 className='text-center text-2xl font-bold'>Deans</h1>
@@ -132,9 +136,9 @@ Assistant Professor of Applied Sciences</td>
             </table>
           </div>
         </div>
-        
       </div>
-
+      <Footer/>
+      </>
     
     );
   };

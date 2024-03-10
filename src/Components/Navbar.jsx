@@ -21,12 +21,24 @@ const Navbar = () => {
   const [colorpickermenu,setcolorpickermenu]=useState(false);
 
   const [Menu, setMenu] = useState(false);
+  const [AdminMenu, setAdminMenu] = useState(false);
+  const [AcademicsMenu, setAcademicsMenu] = useState(false);
   const NavRef = useRef();
 
   const toggleMenu = () => {
     NavRef.current.classList.toggle("raju1");
     setMenu(!Menu);
   };
+
+  const toggleAdminSubMenu = () => {
+    NavRef.current.classList.toggle("adminsubc1");
+    setAdminMenu(!AdminMenu);
+  }
+
+  const toggleAcademicSubMenu = () => {
+    NavRef.current.classList.toggle("academicsubc1");
+    setAcademicsMenu(!AcademicsMenu);
+  }
 
 
   useEffect(() => {
@@ -59,18 +71,60 @@ const Navbar = () => {
             <i className="fa-solid fa-xmark"></i>
           </div>
         </div>
-        <div className="p-[15px] mt-6 text-white font-dosis text-2xl">
-          <p onClick={toggleMenu} className="mb-[13px]"><Link to="/">{t("home")}</Link></p>
-          <p onClick={toggleMenu} className="mb-[13px]"> <Link to="/About">{t("about_us")}</Link></p>
-          <p onClick={()=>{toggleMenu();}} className="mb-[13px]"><Link to="/Administration" >{t("administration")}</Link></p>
-          <p  className="mb-[13px]"><Link to="/Academics" >{t("academics")}</Link></p>
-          <p  className="mb-[13px]"><Link to="/Departments" >{t("dept")}</Link></p>
-          <p  className="mb-[13px]"><Link to="/Research" >{t("research")}</Link></p>
-          <p  className="mb-[13px]"><Link to="/Traning&Placement" >{t("t_p")}</Link></p>
+        <div className="p-[15px] mt-6 text-white font-dosis text-2xl overflow-scroll h-full">
+          <p onClick={toggleMenu} className="mb-[13px] border-b border-b-gray-50/25"><Link to="/">{t("home")}</Link></p>
+          <p onClick={toggleMenu} className="mb-[13px] border-b border-b-gray-50/25"> <Link to="/About">{t("about_us")}</Link></p>
+          <p onClick={toggleAdminSubMenu} className={`mb-[13px] adminsubc`}>
+            <div className={`${AdminMenu ? "arrow" : "arrow-down"} border-b border-b-gray-50/25`}>{t("administration")}</div>
+            <p className="ml-8" id='admin'>
+              <ul className="pt-3">
+                <li className={`mb-[13px] border-b border-b-gray-50/25`}>
+                  <Link to="/BOG">BOG</Link>
+                </li>
+                <li className={`mb-[13px] border-b border-b-gray-50/25`}>
+                  <Link to="/Director">Director</Link>
+                </li>
+                <li className={`mb-[13px] border-b border-b-gray-50/25`}>
+                  <Link to="/Registrar">Registrar</Link>
+                </li>
+                <li className={`mb-[13px] border-b border-b-gray-50/25`}>
+                  <Link to='/Senate'>Senate</Link>
+                </li>
+                <li className={`mb-[13px] border-b border-b-gray-50/25`}>
+                  <Link to='/Dean'>Deans</Link>
+                </li>
+                <li className={`mb-[13px] border-b border-b-gray-50/25`}>
+                  <Link to='/Building'>Building and Works Committee</Link>
+                </li>
+                <li className={`mb-[13px] border-b border-b-gray-50/25`}>
+                  <Link to='/Finance'>Finance</Link>
+                </li>
+                <li className={`mb-[13px] border-b border-b-gray-50/25`}>
+                  <Link to='/Reports'>Reports</Link>
+                </li>
+              </ul>
+            </p>
+          </p>
+          <p onClick={toggleAcademicSubMenu} className={`mb-[13px] academicsubc`}>
+            <div className={`${AcademicsMenu ? "arrow" : "arrow-down"} border-b border-b-gray-50/25`}>{t("academics")}</div>
+            <p className="ml-8" id='academic'>
+              <ul className="pt-3">
+                <li className={`mb-[13px] border-b border-b-gray-50/25`}>
+                  <Link to="/Academics">Academic Calender</Link>
+                </li>
+                <li className={`mb-[13px] border-b border-b-gray-50/25`}>
+                  <Link to="/Dissertation">Dissertation Form</Link>
+                </li>
+              </ul>
+            </p>
+          </p>
+          <p  className="mb-[13px] border-b border-b-gray-50/25"><Link to="/Departments" >{t("dept")}</Link></p>
+          <p  className="mb-[13px] border-b border-b-gray-50/25"><Link to="/Research" >{t("research")}</Link></p>
+          <p  className="mb-[13px] border-b border-b-gray-50/25"><Link to="/Traning&Placement" >{t("t_p")}</Link></p>
           {/* <p  className="mb-[13px]"><Link to="/Research" >Students</Link></p> */}
-          <p  className="mb-[13px]"><Link to="/Alumni" >{t("alumni")}</Link></p>
-          <p  className="mb-[13px]"><Link to="/Noneofourbussiness" >{t("feepay")}</Link></p>
-          <p className="mb-[13px]">{t("mis")}</p>
+          <p  className="mb-[13px] border-b border-b-gray-50/25"><Link to="/Alumni" >{t("alumni")}</Link></p>
+          <p  className="mb-[13px] border-b border-b-gray-50/25"><Link to="/Noneofourbussiness" >{t("feepay")}</Link></p>
+          <p className="mb-[13px] border-b border-b-gray-50/25">{t("mis")}</p>
         </div>
          {colorpickermenu && (
          <div className="absolute inset-y-1/2 inset-x-1/2 -translate-x-2/4 -translate-y-2/4 bg-gray-100 h-48 w-56 rounded-lg border flex flex-col content-center">

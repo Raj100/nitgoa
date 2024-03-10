@@ -1,24 +1,29 @@
 import React from 'react';
 import './director.css';
-import director_img from '../images/Icon-user 1.png';
+import Navbar from '../../Components/Navbar';
+import Footer from '../../Components/Footer';
+import director_img from '../../assets/director.jpeg';
 
-
-const DirectorPage = () => {
+const Director = () => {
     return (
-        <div className="page">
-            <div className="image">
-                <img src={director_img} alt="Director" />
+        <>
+        <Navbar/>
+        <div className='font-dosis'>
+            <div>
+                <div className="image mx-auto w-full rounded-full">
+                    <img src={director_img} className='rounded-full' alt="Director" />
+                </div>
+                <div className="name text-2xl font-bold">
+                    <h2>Prof. O. R. Jaiswal</h2>
+                </div>
             </div>
-            <div className="name">
-                <h2>Prof. O. R. Jaiswal</h2>
-            </div>
-            <div className="pos">
+            <div className="pos text-lg font-bold">
                 <h4>Director, NIT Goa</h4>
             </div>
-            <div className="contact">
+            <div className="mx-auto w-full text-center my-6 text-sm font-bold">
                 <h5> Phone : +91-0832-2404200  |  E-mail : director@nitgoa.ac.in </h5>
             </div>
-            <div className="info">
+            <div className="p-8 text-xx text-center">
                 Prof. O. R. Jaiswal, took over the charge as Director of NIT Goa on 8th June 2023.
                 He is on deputation from the Visvesvaraya National Institute of Technology (VNIT),
                 Nagpur, wherein, he is a Professor at the Department of Applied Mechanics.
@@ -39,10 +44,12 @@ const DirectorPage = () => {
                 He is a member of BIS committees for earthquake and wind codes. He has supervised seven Ph.D. students. He
                 has more than eighty scholarly papers to his credit.
             </div>
+            <Footer/>
         </div>
+        </>
     );
 }
 
 
 
-export default DirectorPage;
+export default Director;
