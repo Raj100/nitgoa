@@ -8,40 +8,7 @@ import Insta from '../assets/insta.png';
 const Footer = () => {
   const {t} = useTranslation()
   const {theme}=useContext(AppContext);
-
-  const [totalVisitors, setTotalVisitors] = useState(0);
-
-  useEffect(() => {
-    const hasVisited = sessionStorage.getItem("visited");
-    if (!hasVisited) {
-      incrementVisitorCount();
-
-      sessionStorage.setItem("visited", "true");
-    }
-
-    fetchVisitorCount();
-  }, []);
-
-  const fetchVisitorCount = () => {
-    fetch("http://localhost:3002/count")
-      .then((response) => response.json())
-      .then((data) => {
-        setTotalVisitors(data.totalVisitors);
-      })
-      .catch((error) => {
-        console.error("Error fetching visitor count:", error);
-      });
-  };
-
-  const incrementVisitorCount = () => {
-    fetch("http://localhost:3002/count", { method: "POST" })
-      .then(() => {
-        fetchVisitorCount();
-      })
-      .catch((error) => {
-        console.error("Error incrementing visitor count:", error);
-      });
-  };
+  
   return (
     <>
       <footer className={`flex flex-col bg-defaultbg2 justify-center font-dosis`}>
@@ -72,7 +39,7 @@ const Footer = () => {
 
         {/* visit counter */}
         <div className={`flex justify-center items-center w-[150px] bg-${theme}th h-[30px] rounded-lg	mx-auto mb-11 text-white text-sm mt-[22px]`}>
-          {t("visit")} : <span id="counter">{totalVisitors}</span>
+          {t("visit")} : <span id="counter">80</span>
         </div>
 
         {/* line */}
