@@ -21,6 +21,7 @@ import Building from './Pages/Building.jsx'
 import Finance from './Pages/Finance.jsx'
 import Reports from './Pages/Reports.jsx'
 import Dissertation from './Pages/Dissertation.jsx'
+import Faculty from './Pages/Faculty/Faculty.jsx'
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -61,6 +62,7 @@ const Root = () => {
             <Route path='/Finance' element={<Finance/>}/>
             <Route path='/Reports' element={<Reports/>}/>
             <Route path='/Dissertation' element={<Dissertation/>}/>
+            <Route path='/Faculty' element={<Faculty/>}/>
 
         </Routes>
       </BrowserRouter>

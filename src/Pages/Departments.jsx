@@ -3,6 +3,7 @@ import Line from "../assets/Line.svg";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { AppContext } from "../Components/AppContext";
+import { Link } from "react-router-dom";
 const Departments = () => {
     const {theme}=useContext(AppContext);
   return (
@@ -20,11 +21,13 @@ const Departments = () => {
         <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5`}></div>
 
         <div className="grid m-5 gap-[31px]">
+          <Link to='/Faculty'>
           <div className="rounded-2xl border-2 h-52 border-[#555] relative ">
             <div className="border-[0.5px] border-[#4C4C4C] w-full mt-[65px]"></div>
             <div className={`bg-${theme}th w-[75px] h-[75px] rounded-full text-2xl text-white flex justify-center items-center left-[42px] absolute top-[27px]`}><p>CSE</p></div>
             <div className="mt-[58px] ml-[42px] text-2xl font-bold">Computer Science & Enginnering</div>
           </div>
+          </Link>
 
           <div className="rounded-2xl border-2 h-52 border-[#555] relative">
             <div className="border-[0.5px] border-[#4C4C4C] w-full mt-[65px]"></div>

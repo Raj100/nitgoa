@@ -1,18 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: noto sans;
-    margin: auto;
-
-}
-
-
 .page{
     width: 100%;
     margin: auto;
     padding-top: 50px;
-
 }
 
 .select{
@@ -65,7 +54,6 @@
 .foot{
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: blue;
     
 }
 
