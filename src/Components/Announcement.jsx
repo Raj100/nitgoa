@@ -8,6 +8,8 @@ import Synapselogo from "../assets/Doc.svg"
 import Tweetlogo from "../assets/Tweet.svg"
 import { AppContext } from './AppContext'
 import { useTranslation } from 'react-i18next'
+import { BarController } from 'chart.js'
+import Placement from './Placement'
 
 const Announcement = () => {
   const {t} = useTranslation();
@@ -168,8 +170,8 @@ const Announcement = () => {
     <img className={`w-5 filter ${(theme==="dark")? "invert" :""}  mr-1`} src={Graphlogo} alt="Graphlogo" />
   <h1 className='font-dosis font-extrabold text-xl'>{t("placement_stat")}</h1>
   </div>
-  <div className='h-64'>
-
+  <div className='h-full'>
+    <Placement/>
   </div>
 </div>
 
