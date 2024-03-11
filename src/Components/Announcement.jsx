@@ -10,6 +10,7 @@ import { AppContext } from './AppContext'
 import { useTranslation } from 'react-i18next'
 import { BarController } from 'chart.js'
 import Placement from './Placement'
+import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 const Announcement = () => {
   const {t} = useTranslation();
@@ -193,7 +194,7 @@ const Announcement = () => {
   <h1 className='font-dosis font-extrabold text-xl '>{t("tweet")}</h1>
   </div>
   <div className='h-64'>
-
+    <TwitterTweetEmbed tweetId="1732824684683784516" className='overflow-auto'/>
   </div>
 </div>
 

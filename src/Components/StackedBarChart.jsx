@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 
+
+
 const StackedBarChart = ({ data, height, width }) => {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
@@ -31,9 +33,21 @@ const StackedBarChart = ({ data, height, width }) => {
           ],
         },
         options: {
+          layout: {
+            padding: {
+              top: 20,
+            },
+          },
           scales: {
             x: {
               stacked: true,
+              ticks: {
+                font: {
+                  family: 'Dosis',
+                  size: 10, 
+                  weight: "bold",
+                },
+              },
             },
             y: {
               stacked: true,
@@ -41,6 +55,11 @@ const StackedBarChart = ({ data, height, width }) => {
               min: 0,
               ticks: {
                 stepSize: 1,
+                font: {
+                  family: 'Dosis',
+                  size: 10, 
+                  weight: "bold",
+                },
               },
               grid: {
                 display: true, // Display gridlines
@@ -52,6 +71,16 @@ const StackedBarChart = ({ data, height, width }) => {
             },
           },
           plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                font: {
+                  family: 'Dosis',
+                  size: 10, 
+                  weight: "bold",
+                },
+              }
+            },
             tooltip: {
               callbacks: {
                 label: function(context) {
