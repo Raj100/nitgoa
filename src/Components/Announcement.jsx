@@ -10,7 +10,7 @@ import { AppContext } from './AppContext'
 import { useTranslation } from 'react-i18next'
 import { BarController } from 'chart.js'
 import Placement from './Placement'
-import { TwitterTweetEmbed } from 'react-twitter-embed';
+// import { TwitterTweetEmbed } from 'react-twitter-embed';
 import HomePageCaorusel from './HomePageCarousel/HomePageCarousel'
 import MotoCarousel from './MotoCarousel/MotoCarousel'
 
@@ -202,7 +202,7 @@ const Announcement = () => {
   <h1 className='font-dosis font-extrabold text-xl '>{t("tweet")}</h1>
   </div>
   <div className='h-64 overflow-auto'>
-    <TwitterTweetEmbed tweetId="1732824684683784516" className='overflow-y-hidden overflow-x-auto max-w-full max-h-full'/>
+    {/* <TwitterTweetEmbed tweetId="1732824684683784516" className='overflow-y-hidden overflow-x-auto max-w-full max-h-full'/> */}
   </div>
 </div>
 
