@@ -127,7 +127,7 @@ const Footer = () => {
           {t("contact_us")}
           <div id="contact-sub-menu">
           <button className={`w-8 mx-auto my-4 rounded-sm mt-1 bg-gray-500 th px-0.5 py-0.5`}></button>
-              <h2 className="text-3xl font-bold text-center font-sans">National Portals</h2>
+              <h2 className="text-3xl font-bold text-center font-sans">Contact Us</h2>
               <div className={`w-20 mx-auto my-2 rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5`}></div>
               <ul className="text-md flex flex-col gap-2 mt-4 font-bold font-sans">
                 <li>

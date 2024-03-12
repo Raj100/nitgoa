@@ -11,6 +11,8 @@ import { useTranslation } from 'react-i18next'
 import { BarController } from 'chart.js'
 import Placement from './Placement'
 import { TwitterTweetEmbed } from 'react-twitter-embed';
+import HomePageCaorusel from './HomePageCarousel/HomePageCarousel'
+import MotoCarousel from './MotoCarousel/MotoCarousel'
 
 const Announcement = () => {
   const {t} = useTranslation();
@@ -18,9 +20,7 @@ const Announcement = () => {
   return (
     <div>
 
-<div className={`bg-${theme}txtbg h-[211px] lg:h-[543px]`}>
-
-    </div>
+    <HomePageCaorusel className='h-40'/>    
 
          <div className={`bg-${theme}bg pt-5 pb-5 text-${theme}txt`}>
 
@@ -48,7 +48,15 @@ const Announcement = () => {
       <img className='w-6' src={News} alt="News" />
       <h1>{t("news_events")}</h1>
     </div>
-    <p className='list-none text-gray-600 p-4 h-40 overflow-auto text-sm mt-5'>
+    <p className='list-none text-gray-600 p-4 h-40 overflow-auto text-sm mt-2'>
+        <div className='py-2'>
+          <p className='font-bold'>October 6, 2024</p>
+          <p>Advertisement for the Post of Assistant Librarian on Temporary Basis</p>
+        </div>
+        <div className='py-2'>
+          <p className='font-bold'>October 6, 2024</p>
+          <p>Advertisement for the Post of Student Counsellor on Temporary Basis</p>
+        </div>
         <div className='py-2'>
           <p className='font-bold'>October 6, 2024</p>
           <p>Five Day Workshop on Advanced Techniques in Inverse Problem Solving: From Regularization to Deep Learning (Online) March 20-24, 2024 (Under SSR Activities, SERB, DST, Govt. of India)</p>
@@ -64,14 +72,6 @@ const Announcement = () => {
         <div className='py-2'>
           <p className='font-bold'>October 6, 2024</p>
           <p>Provisionally shortlisted candidates for the interview of JRF position w.r.t Ref. No. NITGOA/RECT/RP/2024/OW/01 dt. 29/01/2024 under the project Chips to Startup (C2S) Programme, MeiTY, Govt. of India project titled Design and Development of FPGA Accelerator IP for Deep Neural Network (FAipDNet)</p>
-        </div>
-        <div className='py-2'>
-          <p className='font-bold'>October 6, 2024</p>
-          <p>Advertisement for the Post of Assistant Librarian on Temporary Basis</p>
-        </div>
-        <div className='py-2'>
-          <p className='font-bold'>October 6, 2024</p>
-          <p>Advertisement for the Post of Student Counsellor on Temporary Basis</p>
         </div>
     </p>
     <div className='absolute right-10 flex flex-row gap-1 items-center justify-items-center'>Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -91,6 +91,14 @@ const Announcement = () => {
     <p className='list-none text-gray-600 p-4 h-40 overflow-auto text-sm mt-5'>
         <div className='py-2'>
           <p className='font-bold'>October 6, 2024</p>
+          <p>Advertisement for the Post of Assistant Librarian on Temporary Basis</p>
+        </div>
+        <div className='py-2'>
+          <p className='font-bold'>October 6, 2024</p>
+          <p>Advertisement for the Post of Student Counsellor on Temporary Basis</p>
+        </div>
+        <div className='py-2'>
+          <p className='font-bold'>October 6, 2024</p>
           <p>Five Day Workshop on Advanced Techniques in Inverse Problem Solving: From Regularization to Deep Learning (Online) March 20-24, 2024 (Under SSR Activities, SERB, DST, Govt. of India)</p>
         </div>
         <div className='py-2'>
@@ -104,14 +112,6 @@ const Announcement = () => {
         <div className='py-2'>
           <p className='font-bold'>October 6, 2024</p>
           <p>Provisionally shortlisted candidates for the interview of JRF position w.r.t Ref. No. NITGOA/RECT/RP/2024/OW/01 dt. 29/01/2024 under the project Chips to Startup (C2S) Programme, MeiTY, Govt. of India project titled Design and Development of FPGA Accelerator IP for Deep Neural Network (FAipDNet)</p>
-        </div>
-        <div className='py-2'>
-          <p className='font-bold'>October 6, 2024</p>
-          <p>Advertisement for the Post of Assistant Librarian on Temporary Basis</p>
-        </div>
-        <div className='py-2'>
-          <p className='font-bold'>October 6, 2024</p>
-          <p>Advertisement for the Post of Student Counsellor on Temporary Basis</p>
         </div>
     </p>
     <div className='absolute right-10 flex flex-row gap-1 items-center justify-items-center'>Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -130,6 +130,14 @@ const Announcement = () => {
     <p className='list-none text-gray-600 p-4 h-40 overflow-auto text-sm mt-5'>
         <div className='py-2'>
           <p className='font-bold'>October 6, 2024</p>
+          <p>Advertisement for the Post of Assistant Librarian on Temporary Basis</p>
+        </div>
+        <div className='py-2'>
+          <p className='font-bold'>October 6, 2024</p>
+          <p>Advertisement for the Post of Student Counsellor on Temporary Basis</p>
+        </div>
+        <div className='py-2'>
+          <p className='font-bold'>October 6, 2024</p>
           <p>Five Day Workshop on Advanced Techniques in Inverse Problem Solving: From Regularization to Deep Learning (Online) March 20-24, 2024 (Under SSR Activities, SERB, DST, Govt. of India)</p>
         </div>
         <div className='py-2'>
@@ -143,14 +151,6 @@ const Announcement = () => {
         <div className='py-2'>
           <p className='font-bold'>October 6, 2024</p>
           <p>Provisionally shortlisted candidates for the interview of JRF position w.r.t Ref. No. NITGOA/RECT/RP/2024/OW/01 dt. 29/01/2024 under the project Chips to Startup (C2S) Programme, MeiTY, Govt. of India project titled Design and Development of FPGA Accelerator IP for Deep Neural Network (FAipDNet)</p>
-        </div>
-        <div className='py-2'>
-          <p className='font-bold'>October 6, 2024</p>
-          <p>Advertisement for the Post of Assistant Librarian on Temporary Basis</p>
-        </div>
-        <div className='py-2'>
-          <p className='font-bold'>October 6, 2024</p>
-          <p>Advertisement for the Post of Student Counsellor on Temporary Basis</p>
         </div>
     </p>
     <div className='absolute right-10 flex flex-row gap-1 items-center justify-items-center'>Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -169,7 +169,15 @@ const Announcement = () => {
 <div className={`m-4 bg-${theme}txtbg border rounded-xl p-5`}>
   <div className='flex items-center'>
     <img className={`w-5 filter ${(theme==="dark")? "invert" :""}  mr-1`} src={Graphlogo} alt="Graphlogo" />
-  <h1 className='font-dosis font-extrabold text-xl'>{t("placement_stat")}</h1>
+  <h1 className='font-dosis font-extrabold text-lg flex flex-row w-full gap-4 justify-between items-center'>
+    <div>{t("placement_stat")}</div>
+    <div className=''>
+      <div className={`rounded-xl bg-gray-200 text-[8px] flex flex-row w-full items-center justify-center gap-2 px-1 h-5 w-20`}>
+        <div className={`p-[5px] bg-green-900 rounded-full`}></div>
+        <div>2024 Ongoing</div>
+      </div>
+    </div>
+    </h1>
   </div>
   <div className='h-full'>
     <Placement/>
@@ -193,17 +201,15 @@ const Announcement = () => {
     <img className={`w-5 filter ${(theme==="dark")? "invert" :""} mr-1`} src={Tweetlogo} alt="Tweetlogo" />
   <h1 className='font-dosis font-extrabold text-xl '>{t("tweet")}</h1>
   </div>
-  <div className='h-64'>
-    <TwitterTweetEmbed tweetId="1732824684683784516" className='overflow-auto'/>
+  <div className='h-64 overflow-auto'>
+    <TwitterTweetEmbed tweetId="1732824684683784516" className='overflow-y-hidden overflow-x-auto max-w-full max-h-full'/>
   </div>
 </div>
 
 
 </div>
 
-<div className={`bg-${theme}txtbg h-[357px] mx-7 rounded-2xl`}>
-
-</div>
+<MotoCarousel/>
 
 </div>
     </div>
