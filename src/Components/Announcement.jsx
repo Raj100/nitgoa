@@ -255,6 +255,11 @@ const Announcement = () => {
 
 <MotoCarousel/>
 
+<div className='hidden lg:flex mx-[24px] h-[400px] bg-white rounded-[30px] shadow-lg'>
+  <div></div>
+  <div></div>
+</div>
+
 </div>
     </div>
   )
