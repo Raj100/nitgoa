@@ -16,7 +16,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 export default function MotoCarousel() {
   return (
-    <>
+    <div className='lg:hidden'>
       <Swiper
         slidesPerView={1}
         rewind={true}
@@ -62,6 +62,6 @@ export default function MotoCarousel() {
             </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }

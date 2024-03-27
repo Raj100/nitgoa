@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: noto sans;
+    margin: auto;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+
+.page{
+    
+        height: auto;
+        width: 95%;
+        
+    
+}
+
+.title{
+    width: 100%;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h1{
+    /* margin: auto; */
+    font-size: 24px;
+    text-align: center;
+
+}
+
+.title img{
+    /* margin: auto; */
+    /* width: 50%; */
+    display: inline-flex;
+    /* flex-direction: column; */
+    margin-top: 2px;
+    margin-left: 35%;
+   
+   
+}
+
+.items{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.year{
+    width: 90%;
+    display: flex;
+    padding-top: 20px;
+    /* padding-bottom: 20px; */
+    
+}
+
+.year h4{
+    width: 50%;
+    font-size: 18px;
+    margin: 0;
+    /* text-align: left; */
+    float: left;
+    
+    
+}
+
+.year h5{
+    width: 50%;
+    margin: 0;
+    font-size: 12px;
+    /* float: right; */
+    text-align: right;
+}
+
+.batch{
+    width: 90%;
+
+    margin-top: 15px;
+    font-size: 10px;
+}
+
+.info{
+    color: white;
+    background-color: black;
+    padding-bottom: 10px;
+}
+
+.card img{
+    margin: 0;
+    width: 100%;
+}
+
+.card{
+    margin-bottom: 30px;
+}
+
+
+}

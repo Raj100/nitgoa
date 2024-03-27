@@ -155,15 +155,15 @@ const Navbar = () => {
           <img src={logo} alt="NIT Goa Logo" className="lg:hidden" ></img>
           <img src={searchicon} alt="Search" className={`${(theme==="dark")? "invert" :""} w-[18px]`}></img>
         </div>
-        <div className={`hidden lg:flex bg-${theme}bg shadow-lg p-5 items-center  `}>
+        <div className={`hidden lg:flex bg-${theme}bg shadow-lg p-5 items-center w-full justify-center `}>
           <img src={NitGoalogo} alt="NIT Goa Logo" className="w-[81px]"/>
           <img src={divider} alt="divider" className="mx-2" />
-          <div className="flex flex-col justify-center text-2xl whitespace-nowrap mr-3">
+          {/* <div className="flex flex-col justify-center text-2xl whitespace-nowrap mr-3">
             <p>राष्ट्रीय प्रौद्योगिकी संस्थान</p>
             <p>National Institute of Technology</p>
-          </div>
+          </div> */}
           <div>
-            <ul className="flex gap-[23px] items-center p-[10px] font-dosis text-lg	font-bold overflow-hidden whitespace-nowrap">
+            <ul className="flex gap-[23px] items-center justify-center p-[10px] font-dosis text-lg	font-bold overflow-hidden  ">
               <li>{t("home")}</li>
               <li>{t("about_us")}</li>
               <li>{t("academics")}</li>

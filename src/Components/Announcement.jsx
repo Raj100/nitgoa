@@ -11,8 +11,22 @@ import { useTranslation } from 'react-i18next'
 import { BarController } from 'chart.js'
 import Placement from './Placement'
 // import { TwitterTweetEmbed } from 'react-twitter-embed';
-import HomePageCaorusel from './HomePageCarousel/HomePageCarousel'
+// import HomePageCaorusel from './HomePageCarousel/HomePageCarousel'
 import MotoCarousel from './MotoCarousel/MotoCarousel'
+
+import slideshow1 from "../assets/Slideshow/slideshow1.jpeg";
+import slideshow2 from "../assets/Slideshow/slideshow2.jpeg";
+import slideshow3 from "../assets/Slideshow/slideshow3.jpg";
+import slideshow4 from "../assets/Slideshow/slideshow4.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import "./style.css";
 
 const Announcement = () => {
   const {t} = useTranslation();
@@ -20,7 +34,37 @@ const Announcement = () => {
   return (
     <div>
 
-    <HomePageCaorusel className='h-40'/>    
+<div className={`bg-${theme}txtbg h-[211px] lg:h-[543px] mt-[22px] lg:px-[122px]`}>
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img src={slideshow1} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slideshow2} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slideshow3} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slideshow4} alt="" />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+
+    {/* <HomePageCaorusel className='h-40'/>     */}
 
          <div className={`bg-${theme}bg pt-5 pb-5 text-${theme}txt`}>
 
@@ -114,7 +158,7 @@ const Announcement = () => {
           <p>Provisionally shortlisted candidates for the interview of JRF position w.r.t Ref. No. NITGOA/RECT/RP/2024/OW/01 dt. 29/01/2024 under the project Chips to Startup (C2S) Programme, MeiTY, Govt. of India project titled Design and Development of FPGA Accelerator IP for Deep Neural Network (FAipDNet)</p>
         </div>
     </p>
-    <div className='absolute right-10 flex flex-row gap-1 items-center justify-items-center'>Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <div className=' right-10 flex flex-row gap-1 items-center justify-items-center'>Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
             </svg>
             </div>
@@ -164,7 +208,7 @@ const Announcement = () => {
 
 </div>
 
-<div className='grid grid-cols-1 lg:grid-cols-3'>
+<div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
 
 <div className={`m-4 bg-${theme}txtbg border rounded-xl p-5`}>
   <div className='flex items-center'>
@@ -184,7 +228,7 @@ const Announcement = () => {
   </div>
 </div>
 
-<div className='border-[#9F9F9F] border-[0.2px] my-5 mx-4 lg:hidden'></div>
+<div className='border-[#9F9F9F] border-[0.2px] my-5 mx-4 md:hidden'></div>
 
 <div className={`m-4 bg-${theme}txtbg border border-${theme}txtbg rounded-xl p-5`}>
   <div className='flex items-center'>
@@ -194,7 +238,7 @@ const Announcement = () => {
   <div className='h-64'>
   </div>
 </div>
-<div className='border-[#9F9F9F] border-[0.2px] my-5 mx-4 lg:hidden'></div>
+<div className='border-[#9F9F9F] border-[0.2px] my-5 mx-4 md:hidden'></div>
 
 <div className={`m-4 bg-${theme}txtbg border rounded-xl p-5`}>
   <div className='flex items-center'>
