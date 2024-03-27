@@ -1,10 +1,54 @@
 .raj {
     transform: translateX(-100%);
     transition-timing-function: ease-in-out;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 .raju1 {
     transform: translateX(0px);
     transition-timing-function: ease-in-out;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
+}
+
+.arrow::after {
+    content: "";
+    position: relative;
+    right: 0;
+    top: -5px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ebebeb; /* Adjust color and size as needed */
+    margin-left: 6px;
+}
+
+.arrow-down::after {
+    content: "";
+    position: relative;
+    right: 0;
+    display: inline-block;
+    top: -5px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #ebebeb; /* Adjust color and size as needed */
+    margin-left: 6px; 
+}
+
+.adminsubc #admin {
+    display: none;
+}
+
+.adminsubc1 #admin {
+    display: block;
+}
+
+.academicsubc #academic {
+    display: none;
+}
+
+.academicsubc1 #academic {
+    display: block;
 }
