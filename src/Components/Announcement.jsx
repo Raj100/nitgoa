@@ -5,11 +5,13 @@ import DynamicLinks from "../assets/Dynamic Links.png"
 import Noticeboard from "../assets/Noticeboard.png"
 import Graphlogo from "../assets/Graph.svg"
 import Synapselogo from "../assets/Doc.svg"
+import SynapseImg from "../assets/synapse_newsletter.jpeg"
 import Tweetlogo from "../assets/Tweet.svg"
 import { AppContext } from './AppContext'
 import { useTranslation } from 'react-i18next'
 import { BarController } from 'chart.js'
 import Placement from './Placement'
+import { TwitterTweetEmbed } from 'react-twitter-embed';
 // import { TwitterTweetEmbed } from 'react-twitter-embed';
 // import HomePageCaorusel from './HomePageCarousel/HomePageCarousel'
 import MotoCarousel from './MotoCarousel/MotoCarousel'
@@ -45,7 +47,7 @@ const Announcement = () => {
           pagination={{
             clickable: true,
           }}
-          navigation={true}
+          navigation={false}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
@@ -78,21 +80,21 @@ const Announcement = () => {
   
 <div className='border-[#9F9F9F] border-[0.2px] my-5 mx-4'></div>
     <div className={`m-4 bg-${theme}txtbg border rounded-xl p-5`}>
-      <h1 className='font-dosis font-extrabold	text-base'>🚨 {t("announcement")}</h1>
-      <p className='text-xs	font-semibold'>{t("announcement_content")}</p>
+      <h1 className='font-dosis font-extrabold text-base mb-3'>🚨 {t("latest")}</h1>
+      <p className='text-xs'>{t("announcement_content")}</p>
     </div>
 <div className='border-[#9F9F9F] border-[0.2px] my-5 mx-4 '></div>
 
 
 <div className="grid grid-cols-1  md:grid-cols-3 gap-5 ">
 
-  <div className={`bg-${theme}txtbg w-full shadow-xl rounded-lg p-[10px]`}>
+  <div className={`bg-${theme}txtbg w-full shadow-xl rounded-lg p-[14px] h-[400px]`}>
     <div className='w-full h-[242px]'>
     <div className='flex '>
       <img className='w-6' src={News} alt="News" />
       <h1>{t("news_events")}</h1>
     </div>
-    <p className='list-none text-gray-600 p-4 h-40 overflow-auto text-sm mt-2'>
+    <p className='list-none text-gray-600 p-4 h-80 overflow-auto text-sm mt-2'>
         <div className='py-2'>
           <p className='font-bold'>October 6, 2024</p>
           <p>Advertisement for the Post of Assistant Librarian on Temporary Basis</p>
@@ -126,13 +128,13 @@ const Announcement = () => {
   </div>
 
 
-  <div className={`bg-${theme}txtbg w-full shadow-xl rounded-lg p-[10px]`}>
+  <div className={`bg-${theme}txtbg w-full shadow-xl rounded-lg p-[10px] h-[400px]`}>
     <div className='w-full h-[242px]'>
     <div className='flex '>
       <img className='w-6' src={DynamicLinks} alt="Quick Links" />
       <h1>{t("quicklink")}</h1>
     </div>
-    <p className='list-none text-gray-600 p-4 h-40 overflow-auto text-sm mt-5'>
+    <p className='list-none text-gray-600 p-4 h-80 overflow-auto text-sm mt-5'>
         <div className='py-2'>
           <p className='font-bold'>October 6, 2024</p>
           <p>Advertisement for the Post of Assistant Librarian on Temporary Basis</p>
@@ -158,20 +160,20 @@ const Announcement = () => {
           <p>Provisionally shortlisted candidates for the interview of JRF position w.r.t Ref. No. NITGOA/RECT/RP/2024/OW/01 dt. 29/01/2024 under the project Chips to Startup (C2S) Programme, MeiTY, Govt. of India project titled Design and Development of FPGA Accelerator IP for Deep Neural Network (FAipDNet)</p>
         </div>
     </p>
-    <div className=' right-10 flex flex-row gap-1 items-center justify-items-center'>Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <div className='absolute right-10 flex flex-row gap-1 items-center justify-items-center'>Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
             </svg>
             </div>
     </div>
   </div>
 
-  <div className={`bg-${theme}txtbg w-full shadow-xl rounded-lg p-[10px]`}>
+  <div className={`bg-${theme}txtbg w-full shadow-xl rounded-lg p-[10px] h-[400px]`}>
     <div className='w-full h-[242px]'>
     <div className='flex '>
       <img className='w-6 !text-redth' src={Noticeboard} alt="Notice Board" />
       <h1>{t("notice")}</h1>
     </div>
-    <p className='list-none text-gray-600 p-4 h-40 overflow-auto text-sm mt-5'>
+    <p className='list-none text-gray-600 p-4 h-80 overflow-auto text-sm mt-5'>
         <div className='py-2'>
           <p className='font-bold'>October 6, 2024</p>
           <p>Advertisement for the Post of Assistant Librarian on Temporary Basis</p>
@@ -216,8 +218,8 @@ const Announcement = () => {
   <h1 className='font-dosis font-extrabold text-lg flex flex-row w-full gap-4 justify-between items-center'>
     <div>{t("placement_stat")}</div>
     <div className=''>
-      <div className={`rounded-xl bg-gray-200 text-[8px] flex flex-row w-full items-center justify-center gap-2 px-1 h-5 w-20`}>
-        <div className={`p-[5px] bg-green-900 rounded-full`}></div>
+      <div className={`rounded-xl border-[0.5px] border-gray-300 text-[8px] flex flex-row w-full items-center justify-center gap-2 px-1 h-5 w-20`}>
+        <div className={`p-[5px] bg-[#66D224] rounded-full`}></div>
         <div>2024 Ongoing</div>
       </div>
     </div>
@@ -236,17 +238,18 @@ const Announcement = () => {
   <h1 className='font-dosis font-extrabold text-xl '>{t("synapse")}</h1>
   </div>
   <div className='h-64'>
+    <img src={SynapseImg} />
   </div>
 </div>
 <div className='border-[#9F9F9F] border-[0.2px] my-5 mx-4 md:hidden'></div>
 
-<div className={`m-4 bg-${theme}txtbg border rounded-xl p-5`}>
+<div className={`m-4 bg-${theme}txtbg border rounded-xl p-5 h-80`}>
   <div className='flex items-center'>
     <img className={`w-5 filter ${(theme==="dark")? "invert" :""} mr-1`} src={Tweetlogo} alt="Tweetlogo" />
   <h1 className='font-dosis font-extrabold text-xl '>{t("tweet")}</h1>
   </div>
   <div className='h-64 overflow-auto'>
-    {/* <TwitterTweetEmbed tweetId="1732824684683784516" className='overflow-y-hidden overflow-x-auto max-w-full max-h-full'/> */}
+    <TwitterTweetEmbed tweetId="1732824684683784516" className='overflow-y-hidden overflow-x-auto max-w-full max-h-full'/>
   </div>
 </div>
 

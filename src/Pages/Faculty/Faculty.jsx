@@ -105,7 +105,7 @@ const Faculty = () => {
           <option value="eee">EEE</option>
         </select>
       </div>
-      <div className="dept my-2" id="cse-section" ref={cseRef}>
+      <div className="dept my-2" id="CSE" ref={cseRef}>
         <h3 className="text-xl font-bold">Department of Computer Science and Engineering</h3>
         <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5 my-4`}></div>
         <div className="flex flex-wrap flex-1 gap-4 w-full pl-3">
@@ -187,7 +187,7 @@ const Faculty = () => {
           </div>
         </div>
       </div>
-      <div className="dept my-2" id="ece-section" ref={eceRef}>
+      <div className="dept my-2" id="ECE" ref={eceRef}>
       <h3 className="text-xl font-bold">Department of Electronics and Communication Engineering</h3>
       <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5 my-4`}></div>
         <div className="flex flex-wrap flex-1 gap-4 w-full pl-3">
@@ -251,7 +251,7 @@ const Faculty = () => {
 
         </div>
       </div>
-      <div className="dept my-2" id="eee-section" ref={eeeRef}>
+      <div className="dept my-2" id="EEE" ref={eeeRef}>
       <h3 className="text-xl font-bold">Department of Electrical and Electronics Engineering</h3>
       <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5 my-4`}></div>
         <div className="flex flex-wrap flex-1 gap-4 w-full pl-3">
@@ -312,7 +312,7 @@ const Faculty = () => {
         </div>
       </div>
 
-      <div className="dept my-2" id="mce-section" ref={mceRef}>
+      <div className="dept my-2" id="MCE" ref={mceRef}>
       <h3 className="text-xl font-bold">Department of Mechanical Engineering</h3>
       <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5 my-4`}></div>
         <div className="flex flex-wrap flex-1 gap-4 w-full pl-3">
@@ -409,8 +409,8 @@ const Faculty = () => {
         </div>
       </div>
 
-      <div className="dept my-2" id="cve-section" ref={cveRef}>
-      <h3 className="text-xl font-bold">Department of Civil Engineering</h3>
+      <div className="dept my-2" ref={cveRef}>
+      <h3 className="text-xl font-bold" id="CVE">Department of Civil Engineering</h3>
       <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5 my-4`}></div>
         <div className="flex flex-wrap flex-1 gap-4 w-full pl-3">
         <div class="card shadow-md shadow-gray-500/50 rounded-xl">
@@ -471,7 +471,7 @@ const Faculty = () => {
       </div>
 
 
-      <div className="dept my-2" id="ap-section" ref={apRef}>
+      <div className="dept my-2" id="AP" ref={apRef}>
       <h3 className="text-xl font-bold">Department of Applied Sciences</h3>
       <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5 my-4`}></div>
         <div className="flex flex-wrap flex-1 gap-4 w-full pl-3">
@@ -514,7 +514,7 @@ const Faculty = () => {
         </div>
       </div>
 
-      <div className="dept my-2" id="hu-section" ref={huRef}>
+      <div className="dept my-2" id="HU" ref={huRef}>
       <h3 className="text-xl font-bold">Humanities and Social Sciences</h3>
       <div className={`w-20 mx-auto rounded-sm mt-1 bg-${theme}th px-0.5 py-0.5 my-4`}></div>
         <div className="flex flex-wrap flex-1 gap-4 w-full pl-3">

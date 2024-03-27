@@ -205,10 +205,7 @@ const Footer = () => {
             <p className="">COPYRIGHT</p>
           </div>
         </div>
-
-        <div className="border-2 border-white rounded-lg w-24	my-2 flex justify-center m-auto text-redth  text-greenth  text-darkth  text-defaultth text-pinkth text-darkbg bg-darkbg text-darktxt text-defaulttxt text-redtxt text-pinktxt text-greentxt bg-defaulttxtbg bg-redtxtbg bg-greentxtbg bg-pinktxtbg bg-darktxtbg text-defaulttxtth text-redtxtth text-greentxtth text-pinktxtth text-darktxtth bg-defaultbg bg-greenbg bg-pinkbg bg-redbg bg-darkbg">
           
-        </div>
       </footer>
       <footer className="bg-[#DDEDF4] hidden md:block"> 
         <div className="grid grid-cols-4 gap-5 p-10">

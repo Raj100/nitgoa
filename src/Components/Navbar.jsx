@@ -1,5 +1,5 @@
 import React, { Ref, useRef, useState ,useEffect, useContext } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/nitg_logo.png";
 import menu from "../assets/menu.svg";
 import searchicon from "../assets/icon.svg";
 import translation from "../assets/Translation.png";
@@ -11,6 +11,7 @@ import NitGoalogo from "../assets/NIT_Goa_logo.png"
 import divider from "../assets/Divder.svg"
 import { useTranslation } from "react-i18next";
 import LanguageTranslator from "./LanguageToggle";
+import FormatSize from "../assets/format_size.svg";
 
 // import Hamburger from './Hamburger'
 
@@ -127,7 +128,7 @@ const Navbar = () => {
           <p className="mb-[13px] border-b border-b-gray-50/25">{t("mis")}</p>
         </div>
          {colorpickermenu && (
-         <div className="absolute inset-y-1/2 inset-x-1/2 -translate-x-2/4 -translate-y-2/4 bg-gray-100 h-48 w-56 rounded-lg border flex flex-col content-center">
+         <div className="absolute top-[10%] right-[10%] bg-gray-100 h-48 w-56 rounded-lg border flex flex-col content-center">
             <p className="text-center p-2 border rounded-lg">Choose Theme</p> 
             <div className="flex p-2 flex-wrap justify-center items-center h-full">
               <div className="w-10 h-10 rounded-full bg-defaultth m-2" onClick={()=>{settheme("default");setcolorpickermenu(!colorpickermenu);update("default");}}></div>
@@ -145,15 +146,19 @@ const Navbar = () => {
           <a href="" className=" pr-[10px] ">
             {t('gian')}
           </a>
-          <a href="">{t('login')}</a>
+          <a className=" pr-[10px] ">Tenders</a>
+          <a href="" className="pr-[10px]">{t('login')}</a>
+          <a>
+            <img src={FormatSize} alt="format size" className="inline-flex pr-[10px]" />
+          </a>
         </div>
       </div>
 
       <header className=" sticky top-0 z-20">
-        <div className={`h-[70px] lg:h-[90px] bg-${theme}bg px-4 py-5 flex justify-around shadow-lg z-20 lg:hidden`}>
-          <img onClick={toggleMenu} src={menu} alt="Menu" className={`${(theme==="dark")? "invert" :""} `}/>
-          <img src={logo} alt="NIT Goa Logo" className="lg:hidden" ></img>
-          <img src={searchicon} alt="Search" className={`${(theme==="dark")? "invert" :""} w-[18px]`}></img>
+        <div className={`h-[70px] lg:h-[90px] bg-${theme}bg px-2 py-5 flex justify-around shadow-lg z-20 lg:hidden`}>
+          <img onClick={toggleMenu} src={menu} alt="Menu" className={`${(theme==="dark")? "invert" :""} pr-5`}/>
+          <Link to={"/"} className="flex flex-col justify-center align-center"><img src={logo} alt="NIT Goa Logo" className="scale-[1.1]"></img></Link>
+          <img src={searchicon} alt="Search" className={`${(theme==="dark")? "invert" :""} w-[18px] ml-5`} onClick={toggleMenu}></img>
         </div>
         <div className={`hidden lg:flex bg-${theme}bg shadow-lg p-5 items-center w-full justify-center `}>
           <img src={NitGoalogo} alt="NIT Goa Logo" className="w-[81px]"/>

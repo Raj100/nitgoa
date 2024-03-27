@@ -10,6 +10,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             translation: {
                 home: "Home",
                 announcement: "Announcement",
+                latest: "Latest",
                 about_us: "About us",
                 administration: "Administration",
                 academics: "Academics",
@@ -72,6 +73,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             translation: {
                 home: "होम",
                 announcement: "सूचना",
+                latest: "",
                 about_us: "हमारा परिचय",
                 administration: "प्रशासन",
                 academics: "अकादमिक",
